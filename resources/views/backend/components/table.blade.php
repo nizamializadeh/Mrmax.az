@@ -61,22 +61,18 @@
                 responsive: true,
                 bDestroy: true
             });
-
             // set status
             $('.statusCheckBox').on('change',function () {
                 var _this = $(this);
                 var status = (_this.context.checked) ? 1 : 0;
-                var id = _this.data('row');
                 var data = {
                     'table' : "{{$table}}",
-                    'status' : status,
-                    'id' : id
+                    'status' : status
                 };
                 $.post("{{route('setStatus')}}",data,function (result) {
                     swal("Good job!", result, "success");
                 });
             });
         } );
-
     </script>
 @endpush

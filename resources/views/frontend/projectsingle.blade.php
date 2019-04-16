@@ -1,7 +1,8 @@
 @extends('layouts.frontend.frontend')
 @section('content')
 
-    <section class="rh_banner rh_banner__image" style="background-repeat: no-repeat; background-position: center 12.4441%; background-image: url('wp-content/uploads/2017/10/banner.jpg&quot'); background-size: cover;">
+    <section class="rh_banner rh_banner__image" style="background-repeat: no-repeat; background-position: center 12.4441%; background-image: url({{asset('img/banner.jpg')}}); background-size: cover;">
+
 
         <div class="rh_banner__cover"></div>
         <!-- /.rh_banner__cover -->

@@ -1,7 +1,7 @@
 @extends('layouts.frontend.frontend')
 @section('content')
 
-    <section class="rh_banner rh_banner__image" style="background-repeat: no-repeat; background-position: center 12.4441%; background-image: url('wp-content/uploads/2017/10/banner.jpg&quot'); background-size: cover;">
+    <section class="rh_banner rh_banner__image" style="background-repeat: no-repeat; background-position: center 12.4441%; background-image: url({{asset('img/banner.jpg')}}); background-size: cover;">
 
         <div class="rh_banner__cover"></div>
         <!-- /.rh_banner__cover -->
@@ -40,7 +40,7 @@
                     <!-- /.rh_page__title -->
 
                     <p class="rh_page__property_address">
-                        {{$home->country}}			</p>
+                        {{$home->country}} /	{{$home->city}} 		</p>
 
                     <div class="page-breadcrumbs  page-breadcrumbs-modern">
                         <nav class="property-breadcrumbs">
@@ -105,7 +105,9 @@
                                     <h4>
                                         Sahe            </h4>
                                     <div>
-                                        <i class="fa fa-file-image-o"></i>
+                                        <i class="fa-1x fas fa-vector-square" style="color: #B3B3B3;
+                                                   font-size: 23px;"></i>
+
                                         <span class="figure">{{$home->area}}</span>
                                     </div>
                                 </div>
@@ -114,9 +116,9 @@
 
                                     <div class="rh_property__meta">
                                         <h4>
-                                            Bedrooms            </h4>
+                                            Otaq            </h4>
                                         <div>
-                                            <i class="fa fa-file-image-o"></i>
+                                            <i class="fa-1x fas fa-door-open" style="color: #B3B3B3;font-size: 23px;"></i>
                                             <span class="figure">{{$home->bedrooms}}</span>
                                         </div>
                                     </div>
@@ -133,7 +135,8 @@
                                         <h4>
                                             Date            </h4>
                                         <div>
-                                            <i class="fa fa-file-image-o"></i>
+                                            <i class="fa-1x fas fa-calendar-times-o" style="color: #B3B3B3;font-size: 23px;"></i>
+
                                             <span class="figure">{{$home->date}}</span>
                                         </div>
                                     </div>
@@ -152,7 +155,7 @@
                                         <h4>
                                             mertebe            </h4>
                                         <div>
-                                            <i class="fa fa-file-image-o"></i>
+                                            <i class=" fa-1x far fa-building" style="color: #B3B3B3; font-size:23px;"></i>
                                             <span class="figure">{{$home->floor}}</span>
                                         </div>
                                     </div>

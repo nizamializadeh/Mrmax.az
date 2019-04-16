@@ -25,6 +25,10 @@ img.emoji {
 
 
 }
+.aaadiv>ul{
+    display: inline-flex;
+
+}
 .obyekt{
     transition: height 9s;
     width: 14%;
@@ -66,4 +70,11 @@ img.emoji {
     color: #777;
     line-height: 26px;
     padding: 0px 30px;
+}
+.pp{
+    max-width: 380px;
+    max-height: 285px;
+    min-width: 380px;
+    min-height: 285px;
+
 }

@@ -1,5 +1,6 @@
 @extends('layouts.frontend.frontend')
 @section('content')
+
 <section>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -27,12 +28,12 @@
 
 
 
-    <div class="wrapper-home-sections diagonal-mod-wrapper">
+    <div style="background-color: white" class="wrapper-home-sections diagonal-mod-wrapper">
 
         <section id="home-properties-section"
                  class="rh_section rh_section--props_padding rh_latest-properties ajax-pagination diagonal-mod">
 
-            <div class="diagonal-mod-background"></div>
+            <div style="background-color: white" class="diagonal-mod-background"></div>
 
             <div class="container-later-properties">
                 <div id="home-properties-section-wrapper" class="wrapper-section-contents">
@@ -41,7 +42,7 @@
                         <div class="rh_section__head">
 
 
-                            <div style="height: 100px;" class="tab">
+                            <div style="" class="tab">
                                 <button id="d2" class="obyekt red " type="submit"  onClick="openCity2(event)">
                                     <i class="fa-2x fas fa-home"></i>
                                     <i class=" fa-2x fas fa-building"></i>
@@ -84,15 +85,15 @@
                                         </div>            <!-- /.rh_label -->
 
                                         <figure class="rh_prop_card__thumbnail">
-                                            <a href="property/villa-on-grand-avenue/index.html">
-                                                <img style="width: 380px;height: 285px"  src="{{asset('photo/'.$menzil->image)}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" sizes="(max-width: 680px) 100vw, 680px" />
+                                            <a href="#">
+                                                <img  style="height: 350px;"   src="{{asset('photo/'.$menzil->image)}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image img-responsive "  />
                                             </a>
 
                                             <div class="rh_overlay">
 
                                             </div>
                                             <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                                <a href="{{ route('homesingle', $menzil->id) }}" ">View Property</a>
+                                                <a href="{{ route('homesingle', $menzil->id) }}" >View Property</a>
                                             </div>
                                         </figure>
                                         <!-- /.rh_prop_card__thumbnail -->
@@ -100,7 +101,7 @@
                                         <div class="rh_prop_card__details" style="text-align: center; border:2px solid #DCDBDB;">
                                             <div  id="rh_prop_card_one">
                                                 <h3 style="margin-left: -8%; margin-bottom: 1%;">
-                                                    <a href="property/villa-on-grand-avenue/index.html">
+                                                    <a href="{{ route('homesingle', $menzil->id) }}">
                                                        {{$menzil->header}}
                                                     </a>
                                                 </h3>
@@ -170,15 +171,12 @@
                                                 </div>
 
                                             </div>
-                                            <!-- /.rh_prop_card__meta_wrap -->
 
 
 
                                         </div>
-                                        <!-- /.rh_prop_card__details -->
 
                                     </div>
-                                    <!-- /.rh_prop_card__wrap -->
 
                                 </article>
                              @endforeach
@@ -204,7 +202,7 @@
                                         </div>            <!-- /.rh_label -->
 
                                         <figure class="rh_prop_card__thumbnail">
-                                            <a href="property/villa-on-grand-avenue/index.html">
+                                            <a href="{{ route('homesingle', $menzil->id) }}l">
                                                 <img style="width: 380px;height: 285px"  src="{{asset('photo/'.$obyekt->image)}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" sizes="(max-width: 680px) 100vw, 680px" />
                                             </a>
 
@@ -212,7 +210,7 @@
 
                                             </div>
                                             <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                                <a href="property/villa-on-grand-avenue/index.html">View Property</a>
+                                                <a href="{{ route('homesingle', $menzil->id) }}">View Property</a>
                                             </div>
                                         </figure>
                                         <!-- /.rh_prop_card__thumbnail -->
@@ -220,7 +218,7 @@
                                         <div class="rh_prop_card__details" style="text-align: center; border:2px solid #DCDBDB;">
                                             <div  id="rh_prop_card_one">
                                                 <h3 style="margin-left: -8%; margin-bottom: 1%;">
-                                                    <a href="property/villa-on-grand-avenue/index.html">
+                                                    <a href="{{ route('homesingle', $menzil->id) }}">
                                                         {{$obyekt->header}}
                                                     </a>
                                                 </h3>
@@ -306,25 +304,16 @@
 
 
                         </div>
+                               <div class="aaadiv">
+                                   {{$menzils->links()}}
 
-
-
-
-
-
-<div>
-    <span> {{$menzils->links()}}</span>
-</div>
-
-
-
-
+                               </div>
         </section>
 
 
         <section class="rh_section rh_section--featured diagonal-mod ">
 
-            <div class="diagonal-mod-background"></div>
+            <div   class="diagonal-mod-background"></div>
 
             <div class="wrapper-section-contents">
 
@@ -376,10 +365,11 @@
                 <div class="rh_section__partners_wrap">
                   @foreach($partners as $partner)
                         <div class="rh_partner post-118 partners type-partners status-publish has-post-thumbnail hentry">
-                            <a target="_blank" href="{{$partner->link}}" title="Codecanyon">
-                                <img width="137" height="117" src="{{asset('photo/'.$partner->img)}}" class="attachment-partners-logo size-partners-logo wp-post-image" alt="no image"  />                            </a>
+
+                                <img width="137" height="117" src="{{asset('photo/'.$partner->img)}}" class="attachment-partners-logo size-partners-logo wp-post-image" alt="no image"  />
                         </div>
                       @endforeach
+
 
                 </div>
             </div>

@@ -38,8 +38,21 @@
                     </div>
                 </div>
             </div>
+                <div class="col-sm-6">
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <select name="status" class=" show-tick" data-selected-text-format="count">
 
-            <div class="col-sm-6">
+                                <option {{($slider->status ==0) ? "selected" : ""}} value="0"> de Aktive</option>
+                                <option {{($slider->status ==1) ? "selected" : ""}} value="1">  Aktive</option>
+                            </select>
+                        </div>
+                        <label class="form-label">Trend</label>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
                 <div class="input-group  hidden colorpicker colorpicker-element">
                     <div class="form-line">
                         <input type="text" class="form-control" name="color" value="rgb(134, 186, 191)">

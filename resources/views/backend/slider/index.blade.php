@@ -7,10 +7,10 @@
             <td>{{$slider->header}}</td>
             <td>{{$slider->description}}</td>
             <td>{{$slider->country}}</td>
-            <td>  <div class="switch">
-                    <label><input class="statusCheckBox" data-row="{{$slider->id}}" type="checkbox" {{($slider->status) ? 'checked' : ""}}><span class="lever"></span></label>
-                </div></td>
+            <td>
+               <button class="btn btn-primary"> {{($slider->status ==1) ? "active" : "Deactive"}}</button>
 
+            </td>
             <td>
                 <form action="{{route('slider.destroy',['slider' => $slider->id])}}" method="post">
                     {{ method_field('delete') }}

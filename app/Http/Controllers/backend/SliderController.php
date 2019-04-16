@@ -64,6 +64,7 @@ class SliderController extends Controller
             $slider->header = $request->header;
             $slider->description = $request->description;
             $slider->country = $request->country;
+            $slider->status = $request->status;
             $slider->save();
             $files = $request->file('img');
             if ($request->hasFile('img')) {
@@ -76,9 +77,6 @@ class SliderController extends Controller
                     $image->save();
                 }
             }
-
-
-
         return back();
     }
 
@@ -124,7 +122,8 @@ class SliderController extends Controller
             $slider->header = $request->header;
             $slider->description = $request->description;
             $slider->country = $request->country;
-            $slider->update();
+            $slider->status = $request->status;
+        $slider->update();
 
         return back();
 
@@ -204,6 +203,9 @@ class SliderController extends Controller
                 ],
                 [
                     'label' => 'Country',
+                ],
+                [
+                    'label' => 'Status',
                 ],
 
             ],

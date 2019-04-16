@@ -31,7 +31,7 @@
                                 </div>            <!-- /.rh_label -->
 
                                 <figure class="rh_prop_card__thumbnail">
-                                    <a href="property/villa-on-grand-avenue/index.html">
+                                    <a href="{{ route('projectsingle', $project->id) }}">
                                         <img style="width: 380px;height: 285px"  src="{{asset('photo/'.$project->image)}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" sizes="(max-width: 680px) 100vw, 680px" />
 
                                     </a>
@@ -40,7 +40,7 @@
 
                                     </div>
                                     <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                        <a href="{{ route('projectsingle', $project->id) }}" ">View Property</a>
+                                        <a href="{{ route('projectsingle', $project->id) }}" >View Property</a>
                                     </div>
                                 </figure>
                                 <!-- /.rh_prop_card__thumbnail -->
@@ -49,7 +49,7 @@
                                     <div id="rh_prop_card_one">
                                         <h3 style="margin-left: -8%; margin-bottom: 1%;">
                                             <center>
-                                                <a href="property/villa-on-grand-avenue/index.html">
+                                                <a href="{{ route('projectsingle', $project->id) }}">
                                                     {{$project->header}}
                                                 </a>
                                             </center>

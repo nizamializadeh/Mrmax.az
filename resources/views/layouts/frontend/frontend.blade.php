@@ -205,7 +205,7 @@
         </header>
     </div>
     <div class="rh_long_screen_header_temp">
-        <header style="background-color: white" class="rh_header_var_1 rh_temp_header_large_screens rh_header  rh_header_responsive    rh_header--shadow">
+        <header style="background-color: white;    position: relative" class="rh_header_var_1 rh_temp_header_large_screens rh_header  rh_header_responsive    rh_header--shadow">
 
             <div class="rh_header__wrap">
 
@@ -229,11 +229,12 @@
                         <!--		<div class="hamburger-inner"></div>-->
                         <!--	</div>-->
                         <!--</div>-->
-                        <div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="rh_menu__main clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4403"><a href="/">Ana səhifə</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4411"><a href="/about">Haqqimizda</a>
+                        <div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="rh_menu__main clearfix">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom  current_page_item menu-item-home menu-item-4403"><a href="/">Ana səhifə</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-property menu-item-has-children menu-item-6525"><a href="/about">Haqqimizda</a>
 
                                 </li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-property menu-item-has-children menu-item-6525"><a href="/project">Proyektler</a>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6524"><a href="/project">Proyektler</a>
 
                                 </li>
 
@@ -316,14 +317,14 @@
         <div class="rh_footer__wrap rh_footer--alignCenter rh_footer--paddingBottom">
 
             <div style="position: absolute;
-    left: 87%;
-    bottom: 66%;
-    width: 13%
+    bottom:77%;
+    width: 13%;
     " class="rh_footer__logo">
-                <a title="Real Homes" href="index.html">
+                <a title="Real Homes" href="/">
                     <img style="position: relative; width: 70%" width="38%" src="img/MRMAXwhite.png" alt="Real Homes">
                 </a>
             </div>
+
 
 
 
@@ -335,10 +336,12 @@
                 <div class="rh_widgets">
                     <section id="nav_menu-2" class="widget clearfix widget_nav_menu"><div class="menu-footer-widget-menu-container" style="margin-left: 5px;">
                             <ul id="menu-footer-widget-menu" class="menu">
-                                <li id="menu-item-4427" style="width: 100%" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-105 current_page_item menu-item-4427"><a href="index.html" aria-current="page">Home</a></li>
-                                <li id="menu-item-4426" style="width: 100%"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4426"><a href="news/index.html">News</a></li>
-                                <li id="menu-item-4425" style="width: 100%" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4425"><a href="contact/index.html">Contact</a></li>
-                                <li id="menu-item-4425" style="width: 100%" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4425"><a href="contact/index.html">Contact</a></li>
+
+
+                                <li id="menu-item-4426" style="width: 100%"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4426"><a href="/">Ana səhifə</a></li>
+                                <li id="menu-item-4427" style="width: 100%" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-105 current_page_item menu-item-4427"><a href="/about" aria-current="page">Haqqimizda</a></li>
+                                <li id="menu-item-4425" style="width: 100%" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4425"><a href="/project">Proyektler</a></li>
+                                <li id="menu-item-4425" style="width: 100%" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4425"><a href="/contact">Əlaqə</a></li>
                             </ul>
                         </div>
                     </section>
@@ -397,7 +400,7 @@
                                         </g>
 </svg>
                                 </p>
-                                <p class="content">(+994) 50 828 70 00</p>
+                                <p class="content">(+994) 50 828 60 00</p>
                             </div>
                             <div class="rh_contact_widget__item rh_contact_widget--alignBaseline">
                                 <p class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 510 510">
@@ -405,10 +408,11 @@
                                     </svg>
                                 </p>
                                 <a href="mailto:sa&#108;&#101;s&#064;&#121;&#111;u&#114;web&#115;&#105;te.&#099;&#111;&#109;" class="content">
-                                    info@abk.az				</a>
+                                    info@mrmax.az				</a>
                             </div>
                         </div>			                    </section></div>
             </div>
+
 
 
 
@@ -419,15 +423,15 @@
                     <section id="nav_menu-2" class="widget clearfix widget_nav_menu">
                         <div class="menu-footer-widget-menu-container" style="margin-left: 5px">
                             <div class="rh_contact_widget__item rh_contact_widget--alignBaseline">
-                                <a class="bloc" target="_blank" href="https://www.facebook.com/inspirythemes">
+                                <a class="bloc" target="_blank" href="https://www.facebook.com/mrmaxgroup">
                                     <i class="fa fa-facebook-official fa-lg"></i>
                                     <span>Facebook</span>
                                 </a>
-                                <a  class="bloc" target="_blank" href="https://www.youtube.com/user/Envato">
-                                    <i class="fa fa-youtube-play fa-lg"></i>
-                                    <span>Youtube</span>
-                                </a>
-                                <a  class="bloc" target="_blank" href="https://www.instagram.com/envato/?hl=en">
+                                {{--<a  class="bloc" target="_blank" href="https://www.youtube.com/user/Envato">--}}
+                                    {{--<i class="fa fa-youtube-play fa-lg"></i>--}}
+                                    {{--<span>Youtube</span>--}}
+                                {{--</a>--}}
+                                <a  class="bloc" target="_blank" href="https://www.instagram.com/xaricde_emlak_/?utm_source=ig_profile_share&igshid=36lsnlh0oy3l">
                                     <i class="fa fa-instagram fa-lg"></i>
                                     <span>Instagram</span>
 
