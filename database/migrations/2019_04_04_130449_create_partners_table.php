@@ -16,7 +16,6 @@ class CreatePartnersTable extends Migration
         Schema::create('partners', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('img');
-            $table->text('link');
 
             $table->timestamps();
         });

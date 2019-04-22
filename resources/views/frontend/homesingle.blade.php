@@ -53,7 +53,7 @@
 
                 <div class="rh_page__property_price">
                     <p class="status">
-                        For Sale		</p>
+                       Qiymət		</p>
                     <!-- /.status -->
                     <p class="price">
                        $ {{$home->price}} 		</p>

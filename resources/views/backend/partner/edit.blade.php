@@ -15,14 +15,6 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                    <div class="form-group form-float">
-                        <div class="form-line">
-                            <input name="link" type="text" required class="form-control" value="{{$partner->link}}">
-                            <label class="form-label">Header</label>
-                        </div>
-                    </div>
-                </div>
-            <div class="col-sm-6">
                     <div class="input-group  hidden colorpicker colorpicker-element">
                         <div class="form-line">
                             <input type="text" class="form-control" name="color" value="rgb(134, 186, 191)">

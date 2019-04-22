@@ -4,13 +4,8 @@
         <tr>
             <td>{{$slider->id}}</td>
             <td><img width="75  " class="img-responsive thumbnail post-img-preview" src="{{asset('photo/'.$slider->image)}}"></td>
-            <td>{{$slider->header}}</td>
-            <td>{{$slider->description}}</td>
-            <td>{{$slider->country}}</td>
-            <td>
-               <button class="btn btn-primary"> {{($slider->status ==1) ? "active" : "Deactive"}}</button>
+            <td> {{  $slider->header}}</td>
 
-            </td>
             <td>
                 <form action="{{route('slider.destroy',['slider' => $slider->id])}}" method="post">
                     {{ method_field('delete') }}

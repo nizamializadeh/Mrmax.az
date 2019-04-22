@@ -14,7 +14,6 @@
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href="/profil/edit/{{Auth::user()->id}}"><i class="material-icons">person</i>Profile</a></li>
 
                     <li>
                         <a  href="{{ route('logout') }}"
@@ -42,6 +41,9 @@
                         <span>Managment</span>
                     </a>
                     <ul class="ml-menu">
+                        <li class="{{request()->routeIs('project.index') ? 'active' : ''}}">
+                            <a href="{{route('project.index')}}">Project</a>
+                        </li>
                         <li class="{{request()->routeIs('slider.index') ? 'active' : ''}}">
                             <a href="{{route('slider.index')}}">Sliders</a>
                         </li>
@@ -54,9 +56,7 @@
                         <li class="{{request()->routeIs('video.index') ? 'active' : ''}}">
                             <a href="{{route('video.index')}}">Videoes</a>
                         </li>
-                        <li class="{{request()->routeIs('social.index') ? 'active' : ''}}">
-                            <a href="{{route('social.index')}}">Socials</a>
-                        </li>
+
 
                     </ul>
                 </li>

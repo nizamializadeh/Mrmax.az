@@ -40,7 +40,7 @@
 
                                     </div>
                                     <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                        <a href="{{ route('projectsingle', $project->id) }}" >View Property</a>
+                                        <a href="{{ route('projectsingle', $project->id) }}" >Ətraflı</a>
                                     </div>
                                 </figure>
                                 <!-- /.rh_prop_card__thumbnail -->

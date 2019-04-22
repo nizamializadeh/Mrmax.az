@@ -35,7 +35,7 @@
 
                                     <p class="rh_contact__input rh_contact__input_text">
                                         <label for="email">Email</label>
-                                        <input type="text" name="email" id="email" class="email required" placeholder="Your Email" title="* Please provide a valid email address" aria-required="true">
+                                        <input type="text" name="email" id="email" class="email required" placeholder="Email" title="* Please provide a valid email address" aria-required="true">
                                     </p>
 
                                     <p class="rh_contact__input rh_contact__input_text">
@@ -53,7 +53,7 @@
                                     </div>
 
                                     <p class="rh_contact__input rh_contact__submit">
-                                        <input type="submit" id="submit-button" value="Gonder" class="rh_btn rh_btn--primary" name="submit">
+                                        <input type="submit" id="submit-button" value="Göndər" class="rh_btn rh_btn--primary" name="submit">
                                         <span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF"></rect><g transform="rotate(251.025 64 64)"><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"></path><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
 </span>
                                         <input type="hidden" name="action" value="send_message">

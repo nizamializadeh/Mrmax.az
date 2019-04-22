@@ -137,6 +137,8 @@ class HomeController extends Controller
 
     public function destroy(Home $home)
     {
+        $homeimage =HomeImage::where('id',$home->id);
+        $homeimage->delete();
         $home->delete();
         return back();
     }

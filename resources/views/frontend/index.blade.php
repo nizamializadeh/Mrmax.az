@@ -93,7 +93,7 @@
 
                                             </div>
                                             <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                                <a href="{{ route('homesingle', $menzil->id) }}" >View Property</a>
+                                                <a href="{{ route('homesingle', $menzil->id) }}" >Ətraflı</a>
                                             </div>
                                         </figure>
                                         <!-- /.rh_prop_card__thumbnail -->
@@ -197,20 +197,24 @@
                                             <div class="rh_label__wrap">
                                                 {{
                                                 $obyekt->country
-                                                }}                    <span></span>
+                                                }}
+                                                <span>
+
+                                                </span>
                                             </div>
-                                        </div>            <!-- /.rh_label -->
+                                        </div>
 
                                         <figure class="rh_prop_card__thumbnail">
-                                            <a href="{{ route('homesingle', $menzil->id) }}l">
-                                                <img style="width: 380px;height: 285px"  src="{{asset('photo/'.$obyekt->image)}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" sizes="(max-width: 680px) 100vw, 680px" />
+                                            <a href="{{ route('homesingle', $obyekt->id) }}l">
+                                                <img  style="height: 350px;"   src="{{asset('photo/'.$obyekt->image)}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image img-responsive "  />
+
                                             </a>
 
                                             <div class="rh_overlay">
 
                                             </div>
                                             <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                                <a href="{{ route('homesingle', $menzil->id) }}">View Property</a>
+                                                <a href="{{ route('homesingle', $obyekt->id) }}">Ətraflı</a>
                                             </div>
                                         </figure>
                                         <!-- /.rh_prop_card__thumbnail -->
@@ -365,7 +369,6 @@
                 <div class="rh_section__partners_wrap">
                   @foreach($partners as $partner)
                         <div class="rh_partner post-118 partners type-partners status-publish has-post-thumbnail hentry">
-
                                 <img width="137" height="117" src="{{asset('photo/'.$partner->img)}}" class="attachment-partners-logo size-partners-logo wp-post-image" alt="no image"  />
                         </div>
                       @endforeach

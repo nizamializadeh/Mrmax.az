@@ -16,8 +16,8 @@ class CreateSliderImagesTable extends Migration
         Schema::create('slider_images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('img');
-            $table->unsignedBigInteger('slider_id')->index();
-            $table->foreign('slider_id')->references('id')->on('sliders');
+            $table->unsignedBigInteger('project_id')->index();
+            $table->foreign('project_id')->references('id')->on('projects');
             $table->timestamps();
         });
     }

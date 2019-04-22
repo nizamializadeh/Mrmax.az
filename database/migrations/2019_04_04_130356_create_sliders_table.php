@@ -16,10 +16,8 @@ class CreateSlidersTable extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('image');
-            $table->string('header');
-            $table->text('description');
-            $table->string('country');
-            $table->boolean('status');
+            $table->unsignedBigInteger('project_id')->index();
+            $table->foreign('project_id')->references('id')->on('projects')->nullable();
             $table->timestamps();
         });
     }

@@ -44,7 +44,6 @@ class PartnerController extends Controller
             $name = rand() . "." . $file->getClientOriginalExtension();
             $file->move(public_path('photo'), $name);
             $partner->img = $name;
-            $partner->link = $request->link;
             $partner->save();
         }
         return back();
@@ -88,7 +87,6 @@ class PartnerController extends Controller
             $name = rand() . "." . $file->getClientOriginalExtension();
             $file->move(public_path('photo'), $name);
             $partner->img = $name;
-            $partner->link = $request->link;
             $partner->update();
         }
         return back();
@@ -136,9 +134,6 @@ class PartnerController extends Controller
                 ],
                 [
                     'label' => 'image',
-                ],
-                [
-                    'label' => 'link',
                 ]
 
 

@@ -26,17 +26,9 @@
             </div>
 
 
-            <div class="col-sm-6">
-                <div class="form-group form-float">
-                    <div class="form-line">
-                        <input name="link" type="text" required class="form-control">
-                        <label class="form-label">Link</label>
-                    </div>
-                </div>
-            </div>
             <div class="col-sm-12">
                 <div class="demo-switch">
-                    <button type="submit" class="btn btn-success waves-effect right">Create category</button>
+                    <button type="submit" class="btn btn-success waves-effect right">Create Partners</button>
                 </div>
             </div>
 

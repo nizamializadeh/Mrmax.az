@@ -10,6 +10,6 @@ class SliderImage extends Model
         'img','slider_id'
     ];
     public function slider(){
-        return $this->belongsTo('App\Silider');
+        return $this->belongsTo('App\Project');
     }
 }

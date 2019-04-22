@@ -4,7 +4,6 @@
         <tr>
             <td>{{$partner->id}}</td>
             <td><img width="75  " class="img-responsive thumbnail post-img-preview" src="{{asset('photo/'.$partner->img)}}"></td>
-            <td>{{$partner->link}}</td>
 
             <td>
                 <form action="{{route('partner.destroy',['partner' => $partner->id])}}" method="post">

@@ -28,7 +28,9 @@
                     <div class="rh_contact__form">
                         <section id="contact-form">
                             <div class="header">About</div>
-                            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quam laboriosam non ipsum vero et a nemo aliquam fuga, iusto illo fugiat id praesentium mollitia iste quaerat. Mollitia reprehenderit fugiat, laboriosam vero odio repellendus beatae suscipit obcaecati vel perspiciatis. Odit dolores possimus natus eos nisi, alias cumque nobis? Fugit ipsam autem, explicabo hic. Laboriosam, magnam nisi mollitia distinctio odio id, aspernatur culpa molestiae, minus delectus, dolorum perspiciatis error aperiam ipsum minima modi aut. Molestias earum minima mollitia, rerum officiis sint voluptates eius cum nisi necessitatibus nemo, illo commodi harum eum saepe quia eos quaerat ullam odio quis a aperiam ipsa!</div>
+                            <div class="content">
+
+
                         </section>
                     </div>
                     <!-- /.rh_contact__form -->

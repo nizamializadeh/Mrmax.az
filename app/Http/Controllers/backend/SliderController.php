@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\backend;
 
+use App\Project;
 use App\Slider;
 use App\SliderImage;
 use Illuminate\Http\Request;
@@ -23,13 +24,15 @@ class SliderController extends Controller
             DB::table($request->table)->where('id',$request->id)->update(['status' => $request->status]);
             $resultMessage = ($request->status) ? "Status changed to active" : "Status changed to deactive";
             return response($resultMessage,200);
-
         }
     }
 
     public function index()
     {
-        $sliders = Slider::all();
+        $sliders = DB::table('sliders')
+            ->join('projects', ['projects.id' => 'sliders.project_id'])
+            ->select('sliders.id','sliders.image','projects.header')
+            ->get();
         $settings = $this->getSettingsForTable();
         return view('backend.slider.index',compact('sliders','settings'));
     }
@@ -41,9 +44,9 @@ class SliderController extends Controller
      */
     public function create()
     {
-
         $settings = $this->getSettingsForForm();
-        return view('backend.slider.create',compact('settings'));
+        $projects =Project::all();
+        return view('backend.slider.create',compact('settings','projects'));
     }
 
     /**
@@ -61,22 +64,9 @@ class SliderController extends Controller
             $file->move(public_path('photo'), $name);
             $slider->image = $name;
         }
-            $slider->header = $request->header;
-            $slider->description = $request->description;
-            $slider->country = $request->country;
-            $slider->status = $request->status;
+            $slider->project_id = $request->project_id;
             $slider->save();
-            $files = $request->file('img');
-            if ($request->hasFile('img')) {
-                foreach ($files as $doc) {
-                    $namex = rand() . "." . $doc->getClientOriginalExtension();
-                    $doc->move(public_path('photo'), $namex);
-                    $image = new SliderImage();
-                    $image->slider_id = $slider->id;
-                    $image->img = $namex;
-                    $image->save();
-                }
-            }
+
         return back();
     }
 
@@ -99,9 +89,10 @@ class SliderController extends Controller
      */
     public function edit(Slider  $slider)
     {
+        $projects =Project::all();
         $setting = $this->getSettingsForForm();
         $setting['title'] = 'Edit category';
-        return view('backend.slider.edit',compact('slider','setting'));
+        return view('backend.slider.edit',compact('slider','projects','setting'));
     }
 
     /**
@@ -113,16 +104,14 @@ class SliderController extends Controller
      */
     public function update(Request $request,Slider $slider)
     {
+
         $file = $request->file('image');
         if ($request->hasFile('image')) {
             $name = rand() . "." . $file->getClientOriginalExtension();
             $file->move(public_path('photo'), $name);
             $slider->image = $name;
         }
-            $slider->header = $request->header;
-            $slider->description = $request->description;
-            $slider->country = $request->country;
-            $slider->status = $request->status;
+        $slider->project_id = $request->project_id;
         $slider->update();
 
         return back();
@@ -141,28 +130,7 @@ class SliderController extends Controller
         return back();
     }
 
-    public function sliderimg(SliderImage $image)
-    {
 
-        $image->delete();
-        return back();
-    }
-    public function sliderupload(Request $request)
-    {
-        $files = $request->file('img');
-        if ($request->hasFile('img')) {
-            foreach ($files as $doc) {
-                $namex = rand() . "." . $doc->getClientOriginalExtension();
-                $doc->move(public_path('photo'), $namex);
-                $image = new SliderImage();
-                $image->slider_id = $request->slider_id;
-                $image->img = $namex;
-                $image->save();
-            }
-        }
-        return back();
-
-    }
 
     private  function  getSettingsForForm()
     {
@@ -196,18 +164,8 @@ class SliderController extends Controller
                     'label' => 'image',
                 ],
                 [
-                    'label' => 'Header',
-                ],
-                [
-                    'label' => 'Description',
-                ],
-                [
-                    'label' => 'Country',
-                ],
-                [
-                    'label' => 'Status',
-                ],
-
+                    'label' => 'Project',
+                ]
             ],
         ];
     }

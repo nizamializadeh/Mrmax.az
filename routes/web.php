@@ -21,14 +21,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'admin','prefix' => 'admin'],function (){
 
 
-    Route::delete('/sliderimg{image}','backend\SliderController@sliderimg')->name('sliderimg');
+    Route::delete('/sliderimg{image}','backend\ProjectController@sliderimg')->name('sliderimg');
     Route::delete('/homeimg{image}','backend\HomeController@homeimg')->name('homeimg');
-    Route::post('/sliderupload','backend\SliderController@sliderupload')->name('sliderupload');
+    Route::post('/sliderupload','backend\ProjectController@sliderupload')->name('sliderupload');
     Route::post('/homeupload','backend\HomeController@homeupload')->name('homeupload');
 
 
     Route::resources([
         'slider' => 'backend\SliderController',
+        'project' => 'backend\ProjectController',
         'home' => 'backend\HomeController',
         'partner' => 'backend\PartnerController',
         'video' => 'backend\VideoController',
